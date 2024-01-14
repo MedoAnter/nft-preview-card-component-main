@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+:root{
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  /* (main BG) */
+  --Very-dark-blue-main: hsl(217, 54%, 11%);
+  /* (card BG) */
+  --Very-dark-blue-card: hsl(216, 50%, 16%);
+  /* (line) */
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+
+  --White: hsl(0, 0%, 100%);
+
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+
+body{
+  background: var(--Very-dark-blue-main);
+  font-family: 'Outfit', sans-serif;
+}
+
+
+#card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+#card .container{
+  text-align: center;
+  width: 315px;
+  background: var(--Very-dark-blue-card);
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px rgba(0 , 0 , 0 , 0.2);
+}
+
+
+#card .container .image img{
+  border-radius: 10px;
+  margin:  10px 0;
+  box-shadow: 2px 2px 20px rgba(0 , 0 , 0 , 0.2);
+}
+
+#card .container .image::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--cyan);
+  opacity: 0%;
+  transition: opacity .3s ease;
+}
+
+#card .container .image:hover::after{
+  opacity: 30%;
+}
+
+
+#card .container .card-content{
+  margin: 0 20px;
+}
+
+
+#card .container .card-content h2{
+  margin: 0 55px 10px 0;
+  color: var(--White);
+  font-size: 22px;
+}
+
+#card .container .card-content h2:hover{
+  color: var(--Cyan);
+}
+
+#card .container .card-content .p-1{
+  color: var(--Soft-blue);
+  margin-bottom: 4px;
+}
+
+
+#card .container .card-content .p-2{
+  margin-right: 120px;
+  color: var(--Soft-blue);
+  margin-bottom: 15px;
+}
+
+#card .container .card-about{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 16px 10px;
+}
+
+
+#card .container .card-about .info-1{
+  display: flex;
+  align-items: center;
+  color: var(--Cyan);
+}
+
+#card .container .card-about .info-1 img{
+  margin-right: 8px;
+}
+
+#card .container .card-about .info-2{
+  display: flex;
+  align-items: center;
+  color: var(--Soft-blue);
+}
+
+#card .container .card-about .info-2 img{
+  margin-right: 8px;
+}
+
+#card .container .card-person{
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+#card .container .card-person img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+  margin-right: 8px;
+}
+
+card .container .card-person p{
+  font-size: large;
+}
+
+a{
+  color: var(--White);
+}
+
+a:hover{
+  color: var(--Cyan);
+}
+
+.hr{
+  color: var(--Very-dark-blue-main);
+}
